@@ -4,14 +4,9 @@ import { ThemeC } from "../App";
 const Counter = ({ initialCount }) => {
   const [Count, setCount] = useState(initialCount);
   const style = useContext(ThemeC);
-  const Inc = () => {
-    if (Count > 0) {
-      Count(Count - 1);
-    }
-  };
   return (
     <>
-      <button className="button" onClick={() => Inc()}>
+      <button className="button" onClick={() => setCount(Count - 1)}>
         -
       </button>
       <span style={style}>{Count}</span>
